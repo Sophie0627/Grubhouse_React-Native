@@ -24,7 +24,9 @@ export default class bills extends Component {
     console.log(this.props.navigation.state.params.allData)
   }
   pay = (value)=>{
-    
+    const payDetail = this.props.navigation.state.params.allData
+    let data = PayNow(payDetail, value)
+    console.log(data)
   }
   render() {
     const delivery_date = new Date(this.props.navigation.state.params.allData.delivery_select_time)
