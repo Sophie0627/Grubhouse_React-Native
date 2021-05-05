@@ -23,9 +23,9 @@ export default class bills extends Component {
   componentDidMount() {
     console.log(this.props.navigation.state.params.allData)
   }
-  pay = (value)=>{
+  pay = (value) => {
     const payDetail = this.props.navigation.state.params.allData
-    let data = PayNow(payDetail, value)
+    const data = PayNow(payDetail, value)
     console.log(data)
   }
   render() {
@@ -265,7 +265,7 @@ export default class bills extends Component {
                 payment_type = "apple"
                 break;
               case 2:
-                payment_type = "card"
+                payment_type = "stp"
                 break;
             }
             this.pay(payment_type)
