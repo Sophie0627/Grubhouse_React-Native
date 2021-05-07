@@ -244,7 +244,7 @@ export async function GetUserData() {
 export async function Login(d) {
   Loading.show();
   var data = new FormData();
-  data.append("api_key", " admin@1474?");
+  data.append("api_key", "admin@1474?");
   data.append("device_token", global.CONSTANT.DEVICETYPE);
   data.append("user_mobile", d.email);
   data.append("password", d.password);
